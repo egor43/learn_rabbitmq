@@ -1,5 +1,6 @@
 # Реализация "живучей" очереди, которая даже после рестарта сервера будет восстановлена
 
+import sys
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
