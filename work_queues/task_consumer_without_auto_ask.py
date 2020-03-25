@@ -11,7 +11,7 @@ def callback(ch, method, properties, body):
     time.sleep(body.count(b'.'))
     print(f'Done')
     # Отвечаем кролику, что сообщение обработано
-    ch.basic_ask(delivery_tag=method.delivery_tag)
+    ch.basic_ack(delivery_tag=method.delivery_tag)
 
 channel.basic_consume(queue='hello', on_message_callback=callback)
 
