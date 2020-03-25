@@ -1,7 +1,7 @@
 import pika
 
 # Создание соединения
-print('Connecting...')
+print('Producer connecting...')
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 print('Connected.')
